@@ -24,30 +24,31 @@
                     <!--<button type="button" class="btn-navbar navbar-right-scnd-btn" data-toggle="sidebar" data-target=".sidebar-right">-->
                         <!--<i class="fa fa-plus"></i>-->
                     <!--</button>-->
+                    <div class="dropdown">
+                        {% if current_user.is_authenticated() %}
 
-                    {% if current_user.is_authenticated() %}
-                        <div class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <button type="button" class="btn-navbar navbar-right-fisrt-btn avatar"
-                                        style="background-image:url({{ current_user.picture }});">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="avatar">
+                                    <button type="button" class="btn-navbar navbar-right-fisrt-btn avatar"
+                                            style="background-image:url({{ current_user.picture }});">
+                                    </button>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="{{ url_for('main.profile') }}">Perfil</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ url_for('auth.logout') }}">Log Out</a>
+                                    </li>
+                                </ul>
+
+                        {% else %}
+                            <a href="{{ url_for('auth.login') }}" id="login-button">
+                                <button type="button" class="btn-navbar navbar-right-fisrt-btn">
+                                    <i class="fa fa-lock"></i>
                                 </button>
                             </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="{{ url_for('main.profile') }}">Perfil</a>
-                                </li>
-                                <li>
-                                    <a href="{{ url_for('auth.logout') }}">Log Out</a>
-                                </li>
-                            </ul>
-                        </div>
-                    {% else %}
-                        <a href="{{ url_for('auth.login') }}" id="login-button">
-                            <button type="button" class="btn-navbar navbar-right-fisrt-btn">
-                                <i class="fa fa-lock"></i>
-                            </button>
-                        </a>
-                    {% endif %}
+                        {% endif %}
+                    </div>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->

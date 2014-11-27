@@ -158,16 +158,19 @@ header .intro-text .skills {
 
     .navbar-right-fisrt-btn {
         position: absolute;
-        right:70px;
-    }
-
-    .navbar-right-scnd-btn {
-        position: absolute;
-        right:120px;
+        right:0;
     }
 
     .dropdown .dropdown-menu {
         margin-top: 45px;
+    }
+
+    .col-sm-4 {
+        width: 50%;
+    }
+
+    #tools .tools-item {
+        margin: 0 0 30px;
     }
 }
 
@@ -219,13 +222,7 @@ section.success {
 
     .navbar-right-fisrt-btn {
         position: absolute;
-        right: 15px;
-        margin-top:-45px;
-    }
-
-    .navbar-right-scnd-btn {
-        position: absolute;
-        right:60px;
+        right: 0;
         margin-top:-45px;
     }
 
@@ -314,12 +311,6 @@ section.success {
 
 #tools * {
     z-index: 2;
-}
-
-@media(min-width:767px) {
-    #tools .tools-item {
-        margin: 0 0 30px;
-    }
 }
 
 .btn-outline {
@@ -575,7 +566,8 @@ footer .footer-below {
     color: #fff;
     background: #2c3e50;
     transition: all .3s ease-in-out;
-    outline: 0;
+    outline: none;
+
 }
 
 .btn-navbar {
@@ -624,14 +616,16 @@ footer .footer-below {
 }
 
 .avatar {
+    position: absolute;
     right: 0;
     background-size: 39px 39px;
     border: none;
+
 }
 .login-modal {
     display:    none;
     position:   fixed;
-    z-index:    1050;
+    z-index:    1055;
     top:        0;
     left:       0;
     height:     100%;
@@ -642,14 +636,13 @@ footer .footer-below {
                 no-repeat;
 }
 
-body.loading {
-    overflow: hidden;
-}
+/*body.loading {*/
+    /*overflow: hidden;*/
+/*}*/
 
 body.loading .login-modal {
     display: block;
 }
-
 
 
 
