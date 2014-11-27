@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{%- block content %}
+
+    {% include 'navigation.html' %}
+    {{ super() }}
+    {% include 'header.html' %}
+    {% include 'scroll.html' %}
+    {% include 'tools.html' %}
+    {% include 'about.html' %}
+    {% include 'contact.html' %}
+    {% include 'footer.html' %}
+    <!--{# include 'sidebar.html' #}-->
+
+    <!-- Tools Modals -->
+    <div class="tools-modal modal fade" id="toolsModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2></h2>
+                            <hr class="star-primary">
+                            <img src="{{ url_for('static', filename='img/tools/cabin.png') }}" class="img-responsive img-centered" alt="">
+                            <p></p>
+                            <ul class="list-inline item-details">
+                                <li></li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tools-modal modal fade" id="toolsModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2></h2>
+                            <hr class="star-primary">
+                            <img src="{{ url_for('static', filename='img/tools/cake.png') }}" class="img-responsive img-centered" alt="">
+                            <p></p>
+                            <ul class="list-inline item-details">
+                                <li></li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="login-modal"></div>
+
+{% endblock %}
+
