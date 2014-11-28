@@ -1,5 +1,5 @@
-Portal-tii
+Portal-TII
 ======
 
-This repository contains the source code for the [Portal-tii](http://inf.concordia.ifc.edu.br) website.
+This repository contains the source code for the [Portal-TII](http://inf.concordia.ifc.edu.br) website.
 
