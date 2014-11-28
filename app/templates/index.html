@@ -1,5 +1,15 @@
 {% extends "base.html" %}
 
+{%- block head %}
+    {{ super() }}
+    <script>
+        function blocklyLoaded(blockly) {
+            // Called once Blockly is fully loaded.
+            window.Blockly = blockly;
+        }
+    </script>
+{%- endblock %}
+
 {%- block content %}
 
     {% include 'navigation.html' %}
@@ -15,6 +25,7 @@
     <!-- Tools Modals -->
     <div class="tools-modal modal fade" id="toolsModal1" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
+<<<<<<< Updated upstream
             <div class="close-modal" data-dismiss="modal">
                 <div class="lr">
                     <div class="rl">
@@ -34,7 +45,14 @@
                             </ul>
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Fechar</button>
                         </div>
+=======
+            <div class="full-size">
+                <div class="modal-body">
+                    <div class="close-modal" data-dismiss="modal">
+                        <i class="fa fa-times"></i>
+>>>>>>> Stashed changes
                     </div>
+                    <iframe class="tools-frame" src='{{ url_for("main.blocky") }}'></iframe>
                 </div>
             </div>
         </div>
@@ -68,4 +86,6 @@
     <div class="login-modal"></div>
 
 {% endblock %}
+
+
 

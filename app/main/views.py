@@ -13,3 +13,7 @@ def index():
 @main.route('/profile', methods=['GET'])
 def profile():
   pass
+
+@main.route('/tools/blocky', methods=['GET'])
+def blocky():
+  return render_template('blocky_frame.html')

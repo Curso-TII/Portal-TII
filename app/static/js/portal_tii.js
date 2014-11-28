@@ -32,9 +32,6 @@ $(function() {
     $("#login-button").on("click", function(e) {
         $body.addClass("loading");
     });
-    $("#avatar").on("loaded", function(e) {
-        $body.removeClass("loading");
-    });
 });
 
 $body = $("body");
