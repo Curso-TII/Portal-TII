@@ -569,7 +569,7 @@ footer .footer-below {
     background: #2c3e50;
     transition: all .3s ease-in-out;
     outline: none;
-
+    display: block;
 }
 
 .btn-navbar {
